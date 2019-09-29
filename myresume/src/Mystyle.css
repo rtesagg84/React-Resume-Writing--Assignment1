@@ -1,0 +1,25 @@
+
+.Primary {
+    color:blue;
+    }
+
+    .center {
+        margin: auto;
+        text-decoration: underline;
+        border: 1px solid white;
+        padding-left: 80px
+      }
+    
+.header{
+    text-align: center;
+     line-height: 4pt
+}
+.paragraph{
+    border: 1px solid white;
+     padding-left: 83px;
+    padding-right: 83px 
+}
+.height{
+    line-height: 4pt;
+    padding-left: 80px
+}
