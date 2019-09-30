@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import EdictionList from './EducationList'
 class Education extends Component {
     constructor(props) {
@@ -9,39 +9,40 @@ class Education extends Component {
     }
     render() {
         return (
-            <div className="Education" style={{ paddingLeft: '83px' }}>
-                
+            <div className="Education" style={{ paddingLeft: '83px' }}> {/* Again put css in an external file. */}
+
                 <div>
                     {
                         this.state.EducationList.map((datarow) =>
-                            <React.Fragment key={datarow.id}>
+                            <Fragment key={datarow.id}>
                                 <p>
-                                   <b><i>{datarow.university}</i></b> <br />
+                                    <b><i>{datarow.university}</i></b> <br />
                                     <i>{datarow.country}</i>
                                 </p>
                                 {
-                                    (typeof (datarow.Description) == 'object') ?
+                                    (typeof (datarow.Description) == 'object') &&
                                     <div>
                                         {datarow.Description.map((subDatarow) =>
-                                            <React.Fragment key={datarow.id}>
+                                            <Fragment key={datarow.id}>
                                                 <ul>
 
                                                     <li>{subDatarow.Description1}</li>
 
                                                 </ul>
-                                            </React.Fragment>
+                                            </Fragment>
                                         )
                                         }
-                                    </div> : null
+                                    </div>
                                 }
-                            </React.Fragment>
+                            </Fragment>
                         )
                     }
 
                 </div>
 
-
             </div>
         )
     }
-} export default Education;
+};
+
+export default Education;

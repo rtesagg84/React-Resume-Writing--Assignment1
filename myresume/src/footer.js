@@ -2,20 +2,18 @@ import React, { Component } from 'react'
 class Footer extends Component {
     render() {
         return (
-            <div>
-                <footer className="this is my footer">
-                    <div className="container">
-                        <div className="columns">
-                            <div className="column">
-                                <p style={{ paddingLeft: '500px' }}>{this.props.pageNo}</p>
-                            </div>
-
+            <footer className="this is my footer">
+                <div className="container">
+                    <div className="columns">
+                        <div className="column">
+                            <p style={{ paddingLeft: '500px' }}>{this.props.pageNo}</p>
                         </div>
                     </div>
-                </footer>
-
-            </div>
-
+                </div>
+            </footer>
+            // You don't need this enclosing div since the <footer> is the enclosing parent tag
         )
     }
-} export default Footer;
+};
+
+export default Footer;
