@@ -1,8 +1,8 @@
 const ExperienceList = [
     {
         id: 1,
-        Roll: 'Software Developer,March 2010 – May 2015',
-        Company: 'Delta Information System,Asmara ,Eritrea',
+        Roll: 'Software Developer, March 2010 – May 2015',
+        Company: 'Delta Information System, Asmara, Eritrea',
         Descriprion: 'Top IT consulting firm which provides ERP and Financial software solutions to manufacturing and financial organizations in the country',
         detail: [
             {
@@ -14,21 +14,20 @@ const ExperienceList = [
         ]
     },
     {
-    
-    id: 2,
-    Roll: 'Database Programmer , January 2010- May 2010',
-    Company: 'Delta Information System,Asmara ,Eritrea',
-    Descriprion: 'Top IT consulting firm which provides ERP and Financial software solutions to manufacturing and financial organizations in the country',
-    detail: [
-        {
-            detail1 : 'Create new tables in the database as per the requirement and associated shell scripts to schedule and execute them.',
-            detail2:'Data extraction from various RDBMS via scripts, ETL processing using Informatica and loading into the SQL Data warehouse',	
-            detail3:'Participated in Configuration/Troubleshooting of fixed users and files while setting up these databases',
-            detail4:'	Performed tuning and optimization on SQL queries'
-        }
-    ]
-}
+        id: 2,
+        Roll: 'Database Programmer, January 2010- May 2010',
+        Company: 'Delta Information System, Asmara, Eritrea',
+        Descriprion: 'Top IT consulting firm which provides ERP and Financial software solutions to manufacturing and financial organizations in the country',
+        detail: [
+            {
+                detail1 : 'Create new tables in the database as per the requirement and associated shell scripts to schedule and execute them.',
+                detail2:'Data extraction from various RDBMS via scripts, ETL processing using Informatica and loading into the SQL Data warehouse',	
+                detail3:'Participated in Configuration/Troubleshooting of fixed users and files while setting up these databases',
+                detail4:'	Performed tuning and optimization on SQL queries'
+            }
+        ]
+    }
+];
 
-]
 export default ExperienceList;
     

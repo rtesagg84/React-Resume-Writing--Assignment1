@@ -1,5 +1,5 @@
 
-import React,{Component} from 'react'
+import React, { Component } from 'react'
 import Skills from './Skills'
 import SkillData from './SkillData'
 import Logo from './mulelego.jfif';
@@ -14,7 +14,7 @@ class App extends Component {
         const data = SkillData.map(skill => <Skills key={skill.id} skill={skill} />)
 
         return (
-
+            // It's best practice to put your styles in an external css file unless absolutely necessary
             <div style={{
                 height: 1400,
                 width: 1000,
@@ -27,9 +27,10 @@ class App extends Component {
             }}>
 
                 <div className="ui Resume" style={{ textAlign: 'center' }}  >
-                    <h4 className="header" ><img src={Logo} align="center" height="70" /> Aster Ghebreyesus </h4>
-                     <p className='Primary' > Baltimore,MD ,612-226-7135,astukahiwet@gmail.com</p>
-                     <p>Permanent Work Authorization. No Visa sponsorship required </p>
+                    <h4 className="header" ><img src={Logo} align="center" height="70" alt="logo" /> {/* You should always have an alt prop for  accessability reasons */}
+                        Aster Ghebreyesus </h4>
+                    <p className='Primary' > Baltimore, MD, 612-226-7135, astukahiwet@gmail.com</p>
+                    <p>Permanent Work Authorization. No Visa sponsorship required </p>
                     <hr style={{ boredTop: '6px solid #833fb2', width: '80' }} ></hr>
                 </div>
 
@@ -42,18 +43,17 @@ class App extends Component {
                     </p>
                 </div>
 
-
-                <div  className="Skill Matrix">
+                {/* Good job breaking the page up into components! */}
+                <div className="Skill Matrix">
                     <h3 className="center"> Skill Matrix:</h3>
                     <div className="height">{data}</div>
-                    
                 </div>
 
-                <div className="Experience"> 
+                <div className="Experience">
                     <h3 className="center"> Professional Experience:</h3>
-                     <Experience />
+                    <Experience />
                 </div>
-                
+
                 <div className="Education">
                     <h3 className="center">Education: </h3>
                     <Education />
@@ -67,7 +67,6 @@ class App extends Component {
 
                 </div>
                 <Footer pageNo="page1" />
-
 
             </div>
 

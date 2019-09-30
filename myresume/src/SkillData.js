@@ -1,7 +1,6 @@
 const SkillData = [
-
     {
-        id: 1,
+        id: 1, // You don't really need these ids
         text: 'Mule:   Any Point Studio, Mule EE 3.3+, RAML, Data Weave, Cloud hub, MMC.'
     },
     {
@@ -42,5 +41,6 @@ const SkillData = [
         text: 'Languages: English and Tigrigna'
     }
 
-]
+];
+
 export default SkillData;

@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import ExperienceList from './ExperienceList'
+import React, { Component, Fragment } from 'react'; // You can use 'object destructuring' to import Fragment here and save some typing later
+import ExperienceList from './ExperienceList';
 class Experience extends Component {
     constructor(props) {
         super(props)
@@ -10,43 +10,44 @@ class Experience extends Component {
     render() {
         return (
             <div className="Experince">
-                
+
                 <div style={{ paddingLeft: '80px' }}>{
 
                     this.state.ExperienceList.map((rowdata) =>
-                        <React.Fragment key={rowdata.id}>
-                            <p  >
-                               <b><i>{rowdata.Roll}</i></b><br/>
-                               <b><i>{rowdata.Company}</i></b> <br/>
+                        <Fragment key={rowdata.id}>
+                            <p>
+                                <b><i>{rowdata.Roll}</i></b><br />
+                                <b><i>{rowdata.Company}</i></b> <br />
                                 <i>{rowdata.Descriprion}</i>
                             </p>
 
 
                             {
-                                (typeof (rowdata.detail) == 'object') ?
-                                    <React.Fragment>
-                                        {rowdata.detail.map((subRowData) =>
-                                            <React.Fragment key={rowdata.id}>
-                                                <ul>
-
-                                                    <li>{subRowData.detail1}</li>
-                                                    <li>{subRowData.detail2}</li>
-                                                    <li>{subRowData.detail3}</li>
-                                                    <li>{subRowData.detail4}</li>
-                                                </ul>
-                                            </React.Fragment>
-                                        )
-                                        }
-                                    </React.Fragment> : null
+                                (typeof (rowdata.detail) == 'object') &&
+                                <Fragment>
+                                    {rowdata.detail.map((subRowData) =>
+                                        <Fragment key={rowdata.id}>
+                                            <ul>
+                                                <li>{subRowData.detail1}</li>
+                                                <li>{subRowData.detail2}</li>
+                                                <li>{subRowData.detail3}</li>
+                                                <li>{subRowData.detail4}</li>
+                                                {/* You might want to use array map here again to render these <li>! */}
+                                            </ul>
+                                        </Fragment>
+                                    )
+                                    }
+                                </Fragment>
                             }
 
-                        </React.Fragment>
+                        </Fragment>
                     )
                 }
 
+                </div>
             </div>
-            </div>
-                )
-            }
-            } 
+        )
+    }
+};
+
 export default Experience;
