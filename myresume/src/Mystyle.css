@@ -24,14 +24,19 @@
     padding-left: 80px
 }
 .shadow{
-    height: 1500px;
+    height: 1480px;
     width: 1000px;
     padding: 'none';
     background-color: 'white';
     box-shadow: 10px 10px 10px 10px black;
     margin: 'auto';
     overflow: hidden;
-    overflow: hidden
+    overflow: hidden;
+    position: absolute;
+    left: 10%;
+    top: 2%;
+   
+    
 
 }
 
