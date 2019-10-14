@@ -11,7 +11,7 @@ class Experience extends Component {
         return (
             <div className="Experince">
                 
-                <div style={{ paddingLeft: '80px' }}>{
+                <div style={{ padding: '0 80px 0 80px' }}>{
 
                     this.state.ExperienceList.map((rowdata) =>
                         <React.Fragment key={rowdata.id}>
@@ -23,21 +23,19 @@ class Experience extends Component {
 
 
                             {
-                                (typeof (rowdata.detail) == 'object') ?
+                                (typeof (rowdata.detail) == 'object') &&
                                     <React.Fragment>
                                         {rowdata.detail.map((subRowData) =>
-                                            <React.Fragment key={rowdata.id}>
+                                            <React.Fragment key={subRowData.id}>
                                                 <ul>
 
                                                     <li>{subRowData.detail1}</li>
-                                                    <li>{subRowData.detail2}</li>
-                                                    <li>{subRowData.detail3}</li>
-                                                    <li>{subRowData.detail4}</li>
+                                                   
                                                 </ul>
                                             </React.Fragment>
                                         )
                                         }
-                                    </React.Fragment> : null
+                                    </React.Fragment> 
                             }
 
                         </React.Fragment>

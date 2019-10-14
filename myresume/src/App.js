@@ -15,19 +15,10 @@ class App extends Component {
 
         return (
 
-            <div style={{
-                height: 1400,
-                width: 1000,
-                padding: 'none',
-                backgroundColor: 'white',
-                boxShadow: '10px 10px 10px 10px black',
-                margin: 'auto',
-                overflowX: 'hidden',
-                overflowY: 'hidden'
-            }}>
+            <div className="shadow">
 
                 <div className="ui Resume" style={{ textAlign: 'center' }}  >
-                    <h4 className="header" ><img src={Logo} align="center" height="70" /> Aster Ghebreyesus </h4>
+                    <h4 className="header" ><img src={Logo} alt="Logo" align="center" height="70" /> Aster Ghebreyesus </h4>
                      <p className='Primary' > Baltimore,MD ,612-226-7135,astukahiwet@gmail.com</p>
                      <p>Permanent Work Authorization. No Visa sponsorship required </p>
                     <hr style={{ boredTop: '6px solid #833fb2', width: '80' }} ></hr>

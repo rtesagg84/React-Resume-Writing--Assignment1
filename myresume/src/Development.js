@@ -17,22 +17,20 @@ class Development extends Component {
                 <React.Fragment key={rowdata.id}>
                     <h5 ><i> {rowdata.Roll}</i></h5>
                 
-
                 {
-                    (typeof(rowdata.detail)=='object')?
+                    (typeof(rowdata.detail)=='object')&&
                     <div>
                         {rowdata.detail.map((subRowData) =>
-                        <React.Fragment key={rowdata.id}>
+                        <React.Fragment key={subRowData.id}>
                            <ul>
                                <li>{subRowData.detail1}</li>
-                               <li>{subRowData.detail2}</li>
-                               <li>{subRowData.detail3}</li>
+                             
 
                            </ul> 
                         </React.Fragment>
                         )
                         }
-                    </div>: null
+                    </div>
                 }
                 
                 

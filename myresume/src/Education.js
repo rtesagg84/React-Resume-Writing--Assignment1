@@ -9,7 +9,7 @@ class Education extends Component {
     }
     render() {
         return (
-            <div className="Education" style={{ paddingLeft: '83px' }}>
+            <div className="Education" style={{ padding: '0 83px 0 83px' }}>
                 
                 <div>
                     {
@@ -20,7 +20,7 @@ class Education extends Component {
                                     <i>{datarow.country}</i>
                                 </p>
                                 {
-                                    (typeof (datarow.Description) == 'object') ?
+                                    (typeof (datarow.Description) == 'object') &&
                                     <div>
                                         {datarow.Description.map((subDatarow) =>
                                             <React.Fragment key={datarow.id}>
@@ -32,7 +32,7 @@ class Education extends Component {
                                             </React.Fragment>
                                         )
                                         }
-                                    </div> : null
+                                    </div> 
                                 }
                             </React.Fragment>
                         )
